@@ -1,139 +1,187 @@
-# una-algprog-rf-lista01
+# 🚀 Lista de Exercícios em Java — Algoritmos e Programação
 
-Projeto acadêmico desenvolvido em Java para consolidar conceitos iniciais de lógica de programação, estruturas condicionais, estruturas de repetição, validação de entrada e organização de código em métodos.
+![Status](https://img.shields.io/badge/status-concluído-green)
+![Plataforma](https://img.shields.io/badge/platform-Windows%20%7C%20Linux-blue)
+![Tecnologia](https://img.shields.io/badge/Java-console%20app-orange)
+![Nível](https://img.shields.io/badge/level-iniciante-yellow)
 
-O programa executa em terminal e apresenta um menu principal com 10 exercícios independentes. Cada opção direciona para uma rotina específica, com entrada de dados via `Scanner` e retorno imediato do resultado no console.
+---
 
-## Objetivo
+## 📖 Sobre o Projeto
 
-Centralizar em uma única aplicação os exercícios propostos na disciplina, mantendo uma navegação simples por menu e uma estrutura de código organizada para facilitar leitura, manutenção e evolução do projeto.
+Este repositório apresenta a implementação de uma lista de exercícios da disciplina **Algoritmos e Programação**, com foco no desenvolvimento dos fundamentos da lógica de programação utilizando **Java**.
 
-## Estrutura da aplicação
+A aplicação foi desenvolvida como um **programa único executado via terminal**, contendo um menu interativo que permite ao usuário acessar **10 exercícios independentes**.
 
-O ponto de entrada está no arquivo [Exercicios.java](/home/lucascota/IdeaProjects/una-algprog-rf-lista01/Exercicios.java).
+O projeto prioriza organização, reutilização de código e clareza, mesmo sendo uma aplicação introdutória.
 
-A aplicação foi estruturada da seguinte forma:
+---
 
-- `main`: controla o ciclo principal do sistema e o menu de seleção.
-- `exibirMenuPrincipal`: apresenta as opções disponíveis ao usuário.
-- `exercicio1` até `exercicio10`: encapsulam a lógica de cada exercício.
-- `lerInteiro` e `lerDouble`: centralizam a leitura e validação básica de entradas numéricas.
+## 🎯 Objetivos da Atividade
 
-Essa abordagem reduz repetição de código e separa melhor responsabilidades, o que torna o projeto mais legível mesmo sendo uma aplicação introdutória.
+- Consolidar conceitos básicos de lógica de programação
+- Trabalhar com estruturas condicionais e de repetição
+- Validar entradas de usuário
+- Organizar código em métodos
+- Desenvolver aplicações simples em console
+- Praticar boas práticas desde o início da formação
 
-## Requisitos
+---
 
-- Java JDK 8 ou superior
-- Terminal ou prompt de comando
+## ⚙️ Estrutura da Aplicação
 
-## Compilação e execução
+O ponto de entrada da aplicação está no arquivo:
 
-Para compilar:
+📄 `Exercicios.java`
 
-```bash
-javac Exercicios.java
-```
+A organização interna foi definida da seguinte forma:
 
-Para executar:
+- `main` → controla o fluxo principal e o menu
+- `exibirMenuPrincipal` → exibe as opções disponíveis
+- `exercicio1` até `exercicio10` → lógica isolada de cada exercício
+- `lerInteiro` e `lerDouble` → leitura e validação de entradas
 
-```bash
-java Exercicios
-```
+Essa estrutura reduz duplicação de código e melhora a legibilidade.
 
-## Fluxo de uso
+---
 
-Ao iniciar, o sistema exibe o menu principal:
+## ▶️ Fluxo de Execução
 
-- `0`: encerra o programa
-- `1` a `10`: executam o exercício correspondente
+Ao iniciar o programa:
 
-Após a conclusão de um exercício, o fluxo retorna ao menu principal, permitindo novas execuções até que a opção `0` seja selecionada.
+- `0` → encerra a aplicação
+- `1` a `10` → executam os exercícios correspondentes
 
-## Exercícios implementados
+Após cada execução, o sistema retorna automaticamente ao menu principal.
 
-### 1. Par ou ímpar
+---
 
-Lê um número inteiro e informa se o valor é par ou ímpar.
+## 💻 Exercícios Desenvolvidos
 
-### 2. Maior de dois
+### 1. Par ou Ímpar
+Lê um número inteiro e informa se ele é par ou ímpar.
 
-Lê dois números inteiros e informa qual deles é o maior. Caso os valores sejam iguais, o programa exibe `Iguais`.
+### 2. Maior de Dois
+Compara dois números e informa o maior ou se são iguais.
 
-### 3. Calculadora com menu
+### 3. Calculadora com Menu
+Permite escolher entre:
+- soma
+- subtração
+- multiplicação
+- divisão (com tratamento para divisão por zero)
 
-Exibe um menu de operações matemáticas:
+### 4. Validação de Entrada
+Solicita uma nota entre `0` e `100`, repetindo até ser válida.
 
-- somar
-- subtrair
-- multiplicar
-- dividir
+### 5. Sentinela com Parada no Zero
+Lê números até `0` e exibe:
+- maior valor
+- menor valor
 
-Após a escolha da operação, o sistema lê dois números e apresenta o resultado. A divisão por zero é tratada explicitamente.
+### 6. Simulador de Caixa
+Operações disponíveis:
+- depósito
+- saque
+- consulta de saldo
 
-### 4. Validação de entrada
+Regras:
+- valores positivos obrigatórios
+- saque limitado ao saldo
 
-Solicita uma nota entre `0` e `100`. Enquanto o valor informado estiver fora desse intervalo, o sistema solicita uma nova entrada.
+### 7. Desconto por Categoria
+Aplica desconto baseado no tipo de cliente:
+- comum
+- premium
+- funcionário
 
-### 5. Sentinela com parada no zero
-
-Lê números inteiros até que o usuário digite `0`. O valor `0` é utilizado apenas como sentinela de parada e não entra no cálculo. Ao final, são exibidos o maior e o menor número informados.
-
-### 6. Simulador de caixa
-
-Inicializa o sistema com saldo de `R$ 1000,00` e disponibiliza as operações:
-
-- depositar
-- sacar
-- ver saldo
-- sair
-
-As regras de negócio aplicadas são:
-
-- depósito deve ser maior que zero
-- saque deve ser maior que zero
-- saque não pode ultrapassar o saldo disponível
-
-Ao encerrar, o sistema exibe o saldo final.
-
-### 7. Desconto por categoria
-
-Lê o valor da compra e a categoria do cliente:
-
-- `1`: comum
-- `2`: premium
-- `3`: funcionário
-
-Com base na categoria, aplica o desconto correspondente e exibe o valor do desconto e o valor final da compra. Categorias fora do intervalo esperado são tratadas como inválidas.
-
-### 8. Contagem de valores
-
-Lê 10 números inteiros e contabiliza quantos são:
-
+### 8. Contagem de Valores
+Lê 10 números e contabiliza:
 - positivos
 - negativos
 - zeros
 
 ### 9. Soma de 1 até N
+Calcula a soma de todos os números de `1` até `N`.
 
-Lê um valor inteiro `N` e calcula a soma de todos os números de `1` até `N` utilizando estrutura de repetição.
+### 10. Contagem Regressiva e Soma
+Exibe contagem regressiva de `N` até `1` e soma os valores.
 
-### 10. Contagem regressiva e soma
+---
 
-Lê um número inteiro `N`, com validação para garantir que seja maior que zero. Em seguida, imprime a contagem regressiva de `N` até `1` e calcula a soma total desses valores.
+## 🛠️ Requisitos
 
-## Tratamento de entrada
+- Java JDK 8 ou superior
+- Terminal / Prompt de comando
 
-O projeto possui métodos auxiliares para leitura de números inteiros e decimais. Quando o usuário informa um valor incompatível com o tipo esperado, o sistema exibe uma mensagem de erro e solicita nova entrada.
+---
 
-Esse comportamento melhora a robustez da aplicação e evita interrupções causadas por entradas inválidas no terminal.
+## ▶️ Como Compilar e Executar
 
-## Considerações técnicas
+### Compilar
 
-- O projeto foi desenvolvido em um único arquivo para manter aderência ao escopo acadêmico inicial.
-- A separação por métodos foi mantida para melhorar a organização do código.
-- O uso de laços e condicionais foi priorizado para reforçar fundamentos de programação.
-- O `Scanner` é encerrado ao final da execução da aplicação.
+```bash
+javac Exercicios.java
+```
 
-## Licença
+### Executar
 
-Este projeto está sob a licença definida no arquivo `LICENSE`.
+```bash
+java Exercicios
+```
+
+---
+
+## ✅ Conceitos Utilizados
+
+- estruturas condicionais (`if`, `else`)
+- estruturas de repetição (`while`, `for`)
+- validação de entrada
+- uso de `Scanner`
+- métodos e organização de código
+- operações matemáticas
+- controle de fluxo por menu
+
+---
+
+## 💡 Boas Práticas Aplicadas
+
+- separação de responsabilidades em métodos
+- reutilização de código para entrada de dados
+- validação de entradas do usuário
+- código legível e organizado
+- tratamento de erros básicos (ex: divisão por zero)
+
+---
+
+## 🚀 Aplicação Acadêmica
+
+Este projeto fortalece habilidades essenciais para evolução na área de desenvolvimento:
+
+- raciocínio lógico
+- modelagem de problemas
+- estruturação de soluções
+- organização de código
+
+Servindo como base para temas mais avançados como:
+
+- orientação a objetos
+- estruturas de dados
+- desenvolvimento de APIs
+- sistemas backend
+
+---
+
+## 🧩 Conclusão
+
+A aplicação reúne múltiplos exercícios em um único sistema, mantendo uma estrutura organizada, simples e funcional.
+
+Mesmo sendo um projeto introdutório, já demonstra preocupação com **boas práticas, reutilização e legibilidade**, fundamentais para evolução como desenvolvedor.
+
+---
+
+## 👨‍💻 Autor
+
+Lucas Cota  
+Estudante de Análise e Desenvolvimento de Sistemas  
+Foco em Backend e Engenharia de Software
